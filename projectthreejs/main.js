@@ -11,16 +11,15 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 let button = document.getElementById("buttonEarth");
 let button2 = document.getElementById("buttonEarthExit");
 
-button.onclick = function a() {
-  camera.position.z = +185;
+button.onmousedown = function a() {
+  camera.position.z = +200;
   camera.position.setY(-3);
   camera.position.x = 0;
   animate2 = stop;
 };
 
-button2.onclick = function b() {
-  requestAnimationFrame(b);
-  camera.position.z += 0.5;
+button.onmouseup = function b() {
+  camera.position.z = 300;
 };
 
 document.onkeydown = function (e) {
@@ -29,13 +28,13 @@ document.onkeydown = function (e) {
     camera.position.z = +185;
     camera.position.setY(-3);
     camera.position.x = 0;
-  } else if (e.keyCode === 37) {
+  } else if (e.keyCode === 65) {
     camera.position.x -= 1;
-  } else if (e.keyCode === 39) {
+  } else if (e.keyCode === 68) {
     camera.position.x += 1;
-  } else if (e.keyCode === 38) {
+  } else if (e.keyCode === 87) {
     camera.position.z -= 1;
-  } else if (e.keyCode === 40) {
+  } else if (e.keyCode === 83) {
     camera.position.z += 1;
   } else if (e.keyCode === 96) {
     camera.position.y += 1;
@@ -164,7 +163,7 @@ earth.position.z = +150;
 function earthAnimate() {
   requestAnimationFrame(earthAnimate);
 
-  earth.rotation.y += 0.2;
+  earth.rotation.y += 0.08;
 
   controls.update();
 
@@ -188,6 +187,18 @@ scene.add(moon);
 moon.position.z = +400;
 moon.position.setY(-1);
 moon.position.x = +20;
+
+function moonAnimate() {
+  requestAnimationFrame(moonAnimate);
+
+  moon.rotation.y += 0.02;
+
+  controls.update();
+
+  renderer.render(scene, camera);
+}
+
+moonAnimate();
 
 //sun
 const sunTexture = new THREE.TextureLoader().load("sun.jpg");

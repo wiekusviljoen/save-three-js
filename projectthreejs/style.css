@@ -73,26 +73,22 @@ main{width:100vw;
                     text-transform: uppercase;
                     color: whitesmoke;
                     font-size: 15px;
-                    position: absolute;left: 45%;
+                    position: absolute;left: 41.5%;
                     position: absolute;bottom: 3%;
 
                 }
-
-                #buttonEarthExit {
-                    cursor : pointer;
-                    padding: 0.3rem 1rem;
-                    margin-top: 2rem;
-                    border: none;
-                    border-radius: 3rem;
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: 500;
-                    background-color:#0072ff;
-                    text-transform: uppercase;
-                    color: whitesmoke;
-                    font-size: 15px;
-                    position: absolute;left: 44.5%;
-                    position: absolute;bottom: 1%;
+                .hold{
+                    padding: 100px 200px !important;
+                    transition-duration: 5s;
                 }
+
+                .release{
+                    padding: 10px 20px !important;
+                    transition-duration: 1s;
+                }
+
+                
+                
 
                
 
