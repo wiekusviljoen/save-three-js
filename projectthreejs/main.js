@@ -4,7 +4,24 @@ import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+//explore button
+
 //model animation
+
+let button = document.getElementById("buttonEarth");
+let button2 = document.getElementById("buttonEarthExit");
+
+button.onclick = function a() {
+  camera.position.z = +185;
+  camera.position.setY(-3);
+  camera.position.x = 0;
+  animate2 = stop;
+};
+
+button2.onclick = function b() {
+  requestAnimationFrame(b);
+  camera.position.z += 0.5;
+};
 
 document.onkeydown = function (e) {
   if (e.keyCode === 32) {

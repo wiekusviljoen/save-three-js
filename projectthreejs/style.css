@@ -29,7 +29,7 @@ main{width:100vw;
         }
 
         header{
-            background:var(--dark-bg);
+            
             grid-column:2 / span 5;
             font-size:2rem;padding:2rem;
             margin-bottom:var(--spacing)
@@ -60,3 +60,42 @@ main{width:100vw;
             .left{
                 grid-column:6 / 12
                 }
+
+                #buttonEarth{
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 15px;
+                    position: absolute;left: 45%;
+                    position: absolute;bottom: 3%;
+
+                }
+
+                #buttonEarthExit {
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 15px;
+                    position: absolute;left: 44.5%;
+                    position: absolute;bottom: 1%;
+                }
+
+               
+
+
+
+                
