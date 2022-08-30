@@ -16,13 +16,13 @@ button.onclick = function a() {
   camera.position.z = 200;
   camera.position.y = -3;
   camera.position.x = +5;
-  this.innerText = "This is OUR PLANET Earth";
+  this.innerText = "This is our Home planet";
   animate2 = stop;
 };
 
 button2.onclick = function b() {
   camera.position.z = 300;
-  button.innerText = "FOCUS ON OUR PLANET";
+  button.innerText = "FOCUS ON Planet Earth";
 };
 
 button3.onclick = function c() {
