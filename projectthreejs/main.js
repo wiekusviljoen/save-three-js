@@ -10,6 +10,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 let button = document.getElementById("buttonEarth");
 let button2 = document.getElementById("buttonEarthExit");
+let button3 = document.getElementById("buttonExplore");
 
 button.onclick = function a() {
   camera.position.z = +200;
@@ -18,8 +19,17 @@ button.onclick = function a() {
   animate2 = stop;
 };
 
-button2.onclick = function c() {
+button2.onclick = function b() {
   camera.position.z = 300;
+};
+
+button3.onclick = function c() {
+  var x = document.getElementById("main");
+  if (x.style.display === "grid") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "grid";
+  }
 };
 
 document.onkeydown = function (e) {
