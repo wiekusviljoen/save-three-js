@@ -17,10 +17,12 @@ button.onclick = function a() {
   camera.position.setY(-3);
   camera.position.x = 0;
   animate2 = stop;
+  this.innerText = "THIS IS PLANET EARTH!";
 };
 
 button2.onclick = function b() {
   camera.position.z = 300;
+  button.innerText = "FOCUS ON OUR PLANET";
 };
 
 button3.onclick = function c() {
