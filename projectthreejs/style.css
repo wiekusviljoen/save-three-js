@@ -73,7 +73,42 @@ main{width:100vw;
                     text-transform: uppercase;
                     color: whitesmoke;
                     font-size: 15px;
-                    position: absolute;left: 41.5%;
+                    position: absolute;left: 43.5%;
+                    position: absolute;bottom: 3%;
+
+                }
+
+                #buttonEarthExit{
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 15px;
+                    position: absolute;left: 30%;
+                    position: absolute;bottom: 3%;
+
+                }
+
+
+                #buttonExplore{
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 15px;
+                    position: absolute;left: 60%;
                     position: absolute;bottom: 3%;
 
                 }

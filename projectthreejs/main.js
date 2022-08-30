@@ -11,14 +11,14 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 let button = document.getElementById("buttonEarth");
 let button2 = document.getElementById("buttonEarthExit");
 
-button.onmousedown = function a() {
+button.onclick = function a() {
   camera.position.z = +200;
   camera.position.setY(-3);
   camera.position.x = 0;
   animate2 = stop;
 };
 
-button.onmouseup = function b() {
+button2.onclick = function c() {
   camera.position.z = 300;
 };
 
