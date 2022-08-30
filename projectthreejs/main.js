@@ -13,11 +13,14 @@ let button2 = document.getElementById("buttonEarthExit");
 let button3 = document.getElementById("buttonExplore");
 
 button.onclick = function a() {
-  camera.position.z = +200;
-  camera.position.setY(-3);
-  camera.position.x = 0;
-  animate2 = stop;
-  this.innerText = "THIS IS PLANET EARTH!";
+  if (camera.position.z === +200) {
+    camera.position.z = +300;
+    this.innerText = "FOCUS ON OUR PLANET";
+  } else {
+    camera.position.z = +200;
+    this.innerText = "EXIT THE ATMOSPHERE";
+    animate2 = stop;
+  }
 };
 
 button2.onclick = function b() {
