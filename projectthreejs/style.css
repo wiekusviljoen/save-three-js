@@ -110,6 +110,7 @@ main{width:100vw;
                     font-size: 15px;
                     position: absolute;left: 60%;
                     position: absolute;bottom: 3%;
+                    display: block;
 
                 }
                 .hold{
