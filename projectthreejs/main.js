@@ -25,10 +25,10 @@ button2.onclick = function b() {
 
 button3.onclick = function c() {
   var x = document.getElementById("main");
-  if (x.style.display === "grid") {
-    x.style.display = "none";
-  } else {
+  if (x.style.display === "none") {
     x.style.display = "grid";
+  } else {
+    x.style.display = "none";
   }
 };
 
@@ -50,6 +50,8 @@ document.onkeydown = function (e) {
     camera.position.y += 1;
   } else if (e.keyCode === 13) {
     camera.position.y -= 1;
+  } else if (e.keyCode === 27) {
+    main.style.display = "grid";
   }
 };
 
