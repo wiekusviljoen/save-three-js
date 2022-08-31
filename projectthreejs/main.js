@@ -1,13 +1,85 @@
 import "./style.css";
 
 import * as THREE from "three";
-//import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js";';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 //import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 //explore button
 
 //model animation
+//class BasicCharacterControls {
+// constructor(params) {
+//   this._Init(params);
+// }
+
+//_Init.(params){
+//this._params = params
+//this._move = {
+//  forward: false,
+// backward: false,
+// left: false,
+// right: false,
+// }
+
+//this._decceleration = new THREE.Vector3(-0.0005, -0.0001, -5.0)
+//this._accelaration = new THREE.Vector3(1, 0.25, 50.0)
+//this._velocity = new THREE.Vector3(0, 0, 0)
+
+//document.addEventListener('keydown', (e) => this._onKeyDown(e), false)
+//document.addEventListener('keyup', (e)=> this._onKeyUp(e), false)
+//}
+//}
+
+//_LoadAnimatedModel() {
+// const loader = new FBXLoader();
+// loader.setPath("./zombie");
+// loader.load("mremireh_o_desbians.fbx", (fbx) => {
+//   fbx.scale.setScalar(0.1);
+//   fbx.traverse((c) => {
+//c.castShadow = true;
+//   });
+
+//  const anim = new FBXLoader();
+// anim.setPath("./zombie");
+//  anim.load("dance.fbx", (anim) => {
+//    this._mixer = new THREE.AnimationMixer(fbx);
+//   const idle = this._mixer.clipAction(anim.animations[0]);
+//   idle.play();
+// });
+// this._scene.add(fbx);
+// });
+//}
+let loadedModel;
+const gltfLoader = new GLTFLoader();
+gltfLoader.load("./space ship/scene.gltf", (gltfScene) => {
+  loadedModel = gltfScene;
+  //console.log(loadedModel1);
+
+  gltfScene.scene.rotation.y = Math.PI / 8;
+  gltfScene.scene.position.y = 5;
+  gltfScene.scene.position.z = 250;
+  gltfScene.scene.position.x = +200;
+  gltfScene.scene.rotation.y = 330;
+  gltfScene.scene.scale.set(0.001, 0.001, 0.001);
+
+  scene.add(gltfScene.scene);
+});
+
+const animateModel = () => {
+  if (loadedModel) {
+    loadedModel.scene.scale.set(10, 10, 10);
+    //loadedModel.scene.rotation.x += 0.05;
+    //loadedModel.scene.rotation.y += 0.05;
+    //loadedModel.scene.rotation.z += 0.05;
+    loadedModel.scene.position.x += 0.05;
+  }
+  requestAnimationFrame(animateModel);
+};
+
+animateModel();
+
+//space buttons
 
 let button = document.getElementById("buttonEarth");
 //let button2 = document.getElementById("buttonEarthExit");
