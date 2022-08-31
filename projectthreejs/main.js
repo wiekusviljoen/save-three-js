@@ -19,7 +19,7 @@ button.onclick = function a() {
   camera.position.z = 200;
   camera.position.y = -3;
   camera.position.x = +5;
-  this.innerText = "This is our Home planet!!!";
+  this.innerText = "Welcome to our Home planet!!!";
 
   animate2 = stop;
 };
