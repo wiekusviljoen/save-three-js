@@ -39,6 +39,31 @@ main{
             position: relative;left: 45%;
             
         }
+
+        #buttonExploreShow{
+            background-color:#0072ff;
+            cursor : pointer;
+            border-radius: 5px;
+            font-size: 30px;
+            position: absolute;left: 45%;
+            
+            
+        }
+
+       
+
+        .main3{
+            color:#fff;
+        z-index:99;
+        position:absolute;
+        padding:120px 0;
+        display:none;
+        font-size:2rem;padding:2rem;
+        margin-bottom:var(--spacing);
+        background:var(--dark-bg);
+        border-radius: 50px;
+
+        }
     
     h1,h2,h3,blockquote{
         font-family:elevon,sans-serif;
