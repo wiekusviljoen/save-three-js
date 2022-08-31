@@ -187,7 +187,7 @@ earth.position.z = +150;
 function earthAnimate() {
   requestAnimationFrame(earthAnimate);
 
-  earth.rotation.y += 0.08;
+  earth.rotation.y += 0.05;
 
   controls.update();
 
