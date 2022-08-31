@@ -13,6 +13,7 @@ let button = document.getElementById("buttonEarth");
 let button3 = document.getElementById("buttonExplore");
 let button4 = document.getElementById("buttonExploreHide");
 let button5 = document.getElementById("buttonExploreShow");
+let button6 = document.getElementById("buttonExploreExit");
 
 button.onclick = function a() {
   camera.position.z = 200;
@@ -33,14 +34,18 @@ button5.onclick = function e() {
   x3.style.display = "none";
 };
 
+button6.onclick = function f() {};
+
 //button2.onclick = function b() {
 //camera.position.z = 300;
 // button.innerText = "FOCUS ON Planet Earth";
 //};
+var x4 = document.getElementById("main4");
 var x3 = document.getElementById("main3");
 var x2 = document.getElementById("main2");
 button3.onclick = function c() {
   x2.style.display = "grid";
+  x4.style.display = "grid";
   animate2 = stop;
   var x = document.getElementById("main");
   if (x.style.display === "none") {

@@ -64,6 +64,20 @@ main{
         border-radius: 50px;
 
         }
+
+
+        .main4{
+            color:#fff;
+        z-index:99;
+        position:absolute;left: 95%;
+        
+        display:none;
+        font-size:2rem;
+        
+        background:var(--dark-bg);
+        border-radius: 50px;
+
+        }
     
     h1,h2,h3,blockquote{
         font-family:elevon,sans-serif;
@@ -161,7 +175,20 @@ main{
                     position: absolute;bottom: 1%;
                     display: block;
 
+            
+
                 }
+
+                #buttonExploreExit{
+                    background-color:#0072ff;
+                    cursor : pointer;
+                    border-radius: 5px;
+                    font-size: 25px;
+                    position: absolute;left: -35%;
+
+                }
+
+
                 .hold{
                     padding: 100px 200px !important;
                     transition-duration: 5s;
