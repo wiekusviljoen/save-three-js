@@ -27,6 +27,7 @@ button.onclick = function a() {
 button4.onclick = function d() {
   x2.style.display = "none";
   x3.style.display = "grid";
+  x4.style.display = "grid";
 };
 
 button5.onclick = function e() {
@@ -51,7 +52,7 @@ var x3 = document.getElementById("main3");
 var x2 = document.getElementById("main2");
 button3.onclick = function c() {
   x2.style.display = "grid";
-  x4.style.display = "grid";
+  x4.style.display = "none";
   animate2 = stop;
   var x = document.getElementById("main");
   if (x.style.display === "none") {
@@ -182,7 +183,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(1000).fill().forEach(addStar);
+Array(300).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
