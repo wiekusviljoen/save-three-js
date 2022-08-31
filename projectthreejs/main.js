@@ -72,6 +72,7 @@ document.onkeydown = function (e) {
     main.style.display = "grid";
     button.innerText = "Focus on our home planet";
     x2.style.display = "none";
+    x3.style.display = "none";
   }
 };
 

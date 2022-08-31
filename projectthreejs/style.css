@@ -44,7 +44,7 @@ main{
             background-color:#0072ff;
             cursor : pointer;
             border-radius: 5px;
-            font-size: 30px;
+            font-size: 25px;
             position: absolute;left: 45%;
             
             
@@ -56,10 +56,10 @@ main{
             color:#fff;
         z-index:99;
         position:absolute;
-        padding:120px 0;
+        
         display:none;
-        font-size:2rem;padding:2rem;
-        margin-bottom:var(--spacing);
+        font-size:2rem;
+        
         background:var(--dark-bg);
         border-radius: 50px;
 
