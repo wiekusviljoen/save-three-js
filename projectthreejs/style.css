@@ -9,6 +9,7 @@
 main{
     color:#fff;
     z-index:99;
+    
     position:absolute;
    
     padding:120px 0;
@@ -69,7 +70,7 @@ main{
         .main4{
             color:#fff;
         z-index:99;
-        position:absolute;left: 95%;
+        position:absolute;left: 96.5%;
         
         display:none;
         font-size:2rem;
