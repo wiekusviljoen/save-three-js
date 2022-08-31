@@ -286,6 +286,18 @@ saturn.position.z = -350;
 saturn.position.setY(+13);
 saturn.position.setX(+160);
 
+function saturnAnimate() {
+  requestAnimationFrame(saturnAnimate);
+
+  saturn.rotation.y += 0.01;
+
+  controls.update();
+
+  renderer.render(scene, camera);
+}
+
+saturnAnimate();
+
 //venus
 
 const venusTexture = new THREE.TextureLoader().load("venus.jpg");
