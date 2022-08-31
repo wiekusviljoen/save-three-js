@@ -34,7 +34,13 @@ button5.onclick = function e() {
   x3.style.display = "none";
 };
 
-button6.onclick = function f() {};
+button6.onclick = function f() {
+  main.style.display = "grid";
+  button.innerText = "Focus on our home planet";
+  x2.style.display = "none";
+  x3.style.display = "none";
+  x4.style.display = "none";
+};
 
 //button2.onclick = function b() {
 //camera.position.z = 300;
