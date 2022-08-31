@@ -56,7 +56,7 @@ main{
         .main3{
             color:#fff;
         z-index:99;
-        position:absolute;left: 1%;
+        position:absolute;left: 5%;
         
         display:none;
         font-size:2rem;
@@ -70,7 +70,7 @@ main{
         .main4{
             color:#fff;
         z-index:99;
-        position:absolute;right: 1%;
+        position:absolute;right: 5%;
         
         display:none;
         font-size:2rem;
