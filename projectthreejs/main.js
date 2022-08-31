@@ -25,8 +25,9 @@ button.onclick = function a() {
 //camera.position.z = 300;
 // button.innerText = "FOCUS ON Planet Earth";
 //};
-
+var x2 = document.getElementById("main2");
 button3.onclick = function c() {
+  x2.style.display = "grid";
   var x = document.getElementById("main");
   if (x.style.display === "none") {
     x.style.display = "grid";
@@ -56,6 +57,7 @@ document.onkeydown = function (e) {
   } else if (e.keyCode === 27) {
     main.style.display = "grid";
     button.innerText = "Focus on our home planet";
+    x2.style.display = "none";
   }
 };
 

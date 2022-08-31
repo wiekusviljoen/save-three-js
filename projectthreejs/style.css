@@ -6,16 +6,30 @@
     }
 
 
-main{width:100vw;
+main{
     color:#fff;
     z-index:99;
     position:absolute;
-    width:100%;margin:0 auto;
+   
     padding:120px 0;
     display:grid;
     grid-template-columns:repeat(12,1fr)
 
     }
+
+
+    .main2{
+        color:#fff;
+        z-index:99;
+        position:absolute;
+        padding:120px 0;
+        display:none;
+        font-size:2rem;padding:2rem;
+        margin-bottom:var(--spacing);
+        background:var(--dark-bg);
+        border-radius: 50px;
+        
+        }
     
     h1,h2,h3,blockquote{
         font-family:elevon,sans-serif;
