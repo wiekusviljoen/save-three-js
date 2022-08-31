@@ -28,6 +28,7 @@ button.onclick = function a() {
 var x2 = document.getElementById("main2");
 button3.onclick = function c() {
   x2.style.display = "grid";
+  animate2 = stop;
   var x = document.getElementById("main");
   if (x.style.display === "none") {
     x.style.display = "grid";
