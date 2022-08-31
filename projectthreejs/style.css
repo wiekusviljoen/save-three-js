@@ -36,7 +36,7 @@ main{
             background-color:#0072ff;
             cursor : pointer;
             border-radius: 5px;
-            font-size: 30px;
+            font-size: 25px;
             position: relative;left: 45%;
             
         }
@@ -70,7 +70,7 @@ main{
         .main4{
             color:#fff;
         z-index:99;
-        position:absolute;left: 96.5%;
+        position:absolute;left: 96%;
         
         display:none;
         font-size:2rem;
