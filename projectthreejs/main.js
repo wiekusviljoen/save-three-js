@@ -61,14 +61,14 @@ gltfLoader.load("./astronaut/scene.gltf", (gltfScene) => {
   gltfScene.scene.position.z = 200;
   gltfScene.scene.position.x = +2;
   gltfScene.scene.rotation.z = 300;
-  gltfScene.scene.scale.set(0.001, 0.001, 0.001);
+  gltfScene.scene.scale.set(5, 5, 5);
 
   scene.add(gltfScene.scene);
 });
 
 const animateModel = () => {
   if (loadedModel) {
-    loadedModel.scene.scale.set(10, 10, 10);
+    loadedModel.scene.scale.set(5, 5, 5);
     loadedModel.scene.rotation.x += 0.05;
     loadedModel.scene.rotation.y += 0.02;
     loadedModel.scene.rotation.x -= 0.02;
@@ -82,21 +82,21 @@ animateModel();
 
 //space buttons
 
-let button = document.getElementById("buttonEarth");
+//let button = document.getElementById("buttonEarth");
 //let button2 = document.getElementById("buttonEarthExit");
 let button3 = document.getElementById("buttonExplore");
 let button4 = document.getElementById("buttonExploreHide");
 let button5 = document.getElementById("buttonExploreShow");
 let button6 = document.getElementById("buttonExploreExit");
 
-button.onclick = function a() {
-  camera.position.z = 200;
-  camera.position.y = -3;
-  camera.position.x = +5;
-  this.innerText = "Welcome to our Home planet!!!";
+//button.onclick = function a() {
+//camera.position.z = 200;
+//camera.position.y = -3;
+//camera.position.x = +5;
+//this.innerText = "Welcome to our Home planet!!!";
 
-  animate2 = stop;
-};
+//animate2 = stop;
+//};
 
 button4.onclick = function d() {
   x2.style.display = "none";
@@ -128,7 +128,7 @@ button3.onclick = function c() {
   x2.style.display = "grid";
   x4.style.display = "none";
   animate2 = stop;
-  buttonEarth.style.display = "none";
+
   var x = document.getElementById("main");
   if (x.style.display === "none") {
     x.style.display = "grid";
