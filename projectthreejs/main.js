@@ -11,6 +11,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 let button = document.getElementById("buttonEarth");
 //let button2 = document.getElementById("buttonEarthExit");
 let button3 = document.getElementById("buttonExplore");
+let button4 = document.getElementById("buttonExploreHide");
 
 button.onclick = function a() {
   camera.position.z = 200;
@@ -19,6 +20,10 @@ button.onclick = function a() {
   this.innerText = "This is our Home planet!!!";
 
   animate2 = stop;
+};
+
+button4.onclick = function d() {
+  x2.style.display = "none";
 };
 
 //button2.onclick = function b() {

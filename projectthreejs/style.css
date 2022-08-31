@@ -30,6 +30,15 @@ main{
         border-radius: 50px;
         
         }
+
+        #buttonExploreHide{
+            background-color:#0072ff;
+            cursor : pointer;
+            border-radius: 5px;
+            font-size: 30px;
+            position: relative;left: 45%;
+            
+        }
     
     h1,h2,h3,blockquote{
         font-family:elevon,sans-serif;
