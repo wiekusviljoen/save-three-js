@@ -2,54 +2,11 @@ import "./style.css";
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-//import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js";
+
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 //explore button
 
-//model animation
-//class BasicCharacterControls {
-// constructor(params) {
-//   this._Init(params);
-// }
-
-//_Init.(params){
-//this._params = params
-//this._move = {
-//  forward: false,
-// backward: false,
-// left: false,
-// right: false,
-// }
-
-//this._decceleration = new THREE.Vector3(-0.0005, -0.0001, -5.0)
-//this._accelaration = new THREE.Vector3(1, 0.25, 50.0)
-//this._velocity = new THREE.Vector3(0, 0, 0)
-
-//document.addEventListener('keydown', (e) => this._onKeyDown(e), false)
-//document.addEventListener('keyup', (e)=> this._onKeyUp(e), false)
-//}
-//}
-
-//_LoadAnimatedModel() {
-// const loader = new FBXLoader();
-// loader.setPath("./zombie");
-// loader.load("mremireh_o_desbians.fbx", (fbx) => {
-//   fbx.scale.setScalar(0.1);
-//   fbx.traverse((c) => {
-//c.castShadow = true;
-//   });
-
-//  const anim = new FBXLoader();
-// anim.setPath("./zombie");
-//  anim.load("dance.fbx", (anim) => {
-//    this._mixer = new THREE.AnimationMixer(fbx);
-//   const idle = this._mixer.clipAction(anim.animations[0]);
-//   idle.play();
-// });
-// this._scene.add(fbx);
-// });
-//}
 let loadedModel;
 const gltfLoader = new GLTFLoader();
 gltfLoader.load("./astronaut/scene.gltf", (gltfScene) => {
@@ -82,21 +39,10 @@ animateModel();
 
 //space buttons
 
-//let button = document.getElementById("buttonEarth");
-//let button2 = document.getElementById("buttonEarthExit");
 let button3 = document.getElementById("buttonExplore");
 let button4 = document.getElementById("buttonExploreHide");
 let button5 = document.getElementById("buttonExploreShow");
 let button6 = document.getElementById("buttonExploreExit");
-
-//button.onclick = function a() {
-//camera.position.z = 200;
-//camera.position.y = -3;
-//camera.position.x = +5;
-//this.innerText = "Welcome to our Home planet!!!";
-
-//animate2 = stop;
-//};
 
 button4.onclick = function d() {
   x2.style.display = "none";
