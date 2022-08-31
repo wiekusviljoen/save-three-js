@@ -54,6 +54,7 @@ button3.onclick = function c() {
   x2.style.display = "grid";
   x4.style.display = "none";
   animate2 = stop;
+  buttonEarth.style.display = "none";
   var x = document.getElementById("main");
   if (x.style.display === "none") {
     x.style.display = "grid";

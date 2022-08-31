@@ -138,6 +138,7 @@ main{
                     font-size: 15px;
                     position: absolute;left: 42%;
                     position: absolute;bottom: 2%;
+                    display: grid;
                     
 
                 }
