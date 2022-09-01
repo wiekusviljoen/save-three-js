@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { cos, sin } from "@tensorflow/tfjs";
 
 let loadedModel2;
 const gltfLoader2 = new GLTFLoader();
@@ -12,16 +13,31 @@ gltfLoader2.load("./space fighter/scene.gltf", (gltfScene2) => {
   //console.log(loadedModel1);
 
   gltfScene2.scene.rotation.y = -280;
-  gltfScene2.scene.position.y = 70;
+  gltfScene2.scene.position.y = 10;
   gltfScene2.scene.position.z = 410;
-  gltfScene2.scene.position.x = -35;
+  gltfScene2.scene.position.x = +45;
   gltfScene2.scene.rotation.z = 0;
   gltfScene2.scene.rotation.x = 50;
-  gltfScene2.scene.scale.set(1, 1, 1);
+  gltfScene2.scene.scale.set(0.1, 0.1, 0.1);
 
   scene.add(gltfScene2.scene);
 });
 
+const animateModel2 = () => {
+  if (loadedModel2) {
+    loadedModel2.scene.position.z -= 0.5;
+    loadedModel2.scene.position.x += 0.1;
+    loadedModel2.scene.position.x -= 0.0002;
+    loadedModel2.scene.rotation.y += 0.0003;
+    loadedModel2.scene.position.y += 0.0001;
+
+    // loadedModel2.scene.position.y = originY + sin(angle) * radius;
+    //loadedModel2.scene.position.x = originX + cos(angle) * radius;
+  }
+  requestAnimationFrame(animateModel2);
+};
+
+animateModel2();
 //explore button
 
 let loadedModel;
