@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-
+//space ship 2
 let loadedModel3;
 const gltfLoader3 = new GLTFLoader();
 gltfLoader3.load("./space fighter/scene.gltf", (gltfScene3) => {
@@ -38,7 +38,7 @@ const animateModel3 = () => {
 
 animateModel3();
 
-//
+//spaceship1
 
 let loadedModel2;
 const gltfLoader2 = new GLTFLoader();
@@ -72,7 +72,7 @@ const animateModel2 = () => {
 };
 
 animateModel2();
-//explore button
+//astronaut
 
 let loadedModel;
 const gltfLoader = new GLTFLoader();
@@ -80,25 +80,24 @@ gltfLoader.load("./astronaut/scene.gltf", (gltfScene) => {
   loadedModel = gltfScene;
   //console.log(loadedModel1);
 
-  gltfScene.scene.rotation.y = Math.PI / 8;
-  gltfScene.scene.position.y = 70;
-  gltfScene.scene.position.z = 410;
+  gltfScene.scene.position.y = 45;
+  gltfScene.scene.position.z = 570;
   gltfScene.scene.position.x = -35;
   gltfScene.scene.rotation.z = 30;
-  gltfScene.scene.rotation.x = 280;
-  gltfScene.scene.scale.set(1, 1, 1);
+  gltfScene.scene.rotation.x = 0;
+  gltfScene.scene.scale.set(0.5, 0.5, 0.5);
 
   scene.add(gltfScene.scene);
 });
 
 const animateModel = () => {
   if (loadedModel) {
-    loadedModel.scene.rotation.x += 0.05;
-    loadedModel.scene.rotation.y += 0.02;
-    loadedModel.scene.rotation.x -= 0.02;
-    loadedModel.scene.position.z += 0;
-    loadedModel.scene.position.y += +0.1;
-    loadedModel.scene.position.x -= +0.2;
+    loadedModel.scene.rotation.x += 0.0;
+    loadedModel.scene.rotation.y += 0;
+    loadedModel.scene.rotation.x -= 0;
+    loadedModel.scene.position.z -= 0.5;
+    loadedModel.scene.position.y += 0.2;
+    loadedModel.scene.position.x -= 0.2;
   }
   requestAnimationFrame(animateModel);
 };
