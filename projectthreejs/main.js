@@ -2,9 +2,26 @@ import "./style.css";
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-
+//import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+//game test
+let loadedModel2;
+const gltfLoader2 = new GLTFLoader();
+gltfLoader2.load("./space fighter/scene.gltf", (gltfScene2) => {
+  loadedModel2 = gltfScene2;
+  //console.log(loadedModel1);
+
+  gltfScene2.scene.rotation.y = 3;
+  gltfScene2.scene.position.y = 70;
+  gltfScene2.scene.position.z = 150;
+  gltfScene2.scene.position.x = -35;
+  gltfScene2.scene.rotation.z = 0;
+  gltfScene2.scene.rotation.x = 0;
+  gltfScene2.scene.scale.set(0.1, 0.1, 0.1);
+
+  scene.add(gltfScene2.scene);
+});
 //explore button
 
 let loadedModel;
