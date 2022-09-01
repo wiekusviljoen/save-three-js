@@ -14,7 +14,7 @@ gltfLoader.load("./astronaut/scene.gltf", (gltfScene) => {
   //console.log(loadedModel1);
 
   gltfScene.scene.rotation.y = Math.PI / 8;
-  gltfScene.scene.position.y = 68;
+  gltfScene.scene.position.y = 70;
   gltfScene.scene.position.z = 410;
   gltfScene.scene.position.x = -35;
   gltfScene.scene.rotation.z = 30;
