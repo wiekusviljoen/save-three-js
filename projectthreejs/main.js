@@ -82,7 +82,7 @@ gltfLoader.load("./space fighter/scene.gltf", (gltfScene) => {
   gltfScene.scene.rotation.y = -280;
   gltfScene.scene.position.y = 10;
   gltfScene.scene.position.z = 300;
-  gltfScene.scene.position.x = -300;
+  gltfScene.scene.position.x = -100;
   gltfScene.scene.rotation.z = 0;
   gltfScene.scene.rotation.x = 50;
   gltfScene.scene.scale.set(0.01, 0.01, 0.01);
