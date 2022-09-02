@@ -72,32 +72,31 @@ const animateModel2 = () => {
 };
 
 animateModel2();
-//astronaut
+//spaceship
 
 let loadedModel;
 const gltfLoader = new GLTFLoader();
-gltfLoader.load("./astronaut/scene.gltf", (gltfScene) => {
+gltfLoader.load("./space fighter/scene.gltf", (gltfScene) => {
   loadedModel = gltfScene;
   //console.log(loadedModel1);
-
-  gltfScene.scene.position.y = 43;
-  gltfScene.scene.position.z = 570;
-  gltfScene.scene.position.x = -35;
-  gltfScene.scene.rotation.z = 30;
-  gltfScene.scene.rotation.x = 0;
-  gltfScene.scene.scale.set(0.5, 0.5, 0.5);
+  gltfScene.scene.rotation.y = -280;
+  gltfScene.scene.position.y = 10;
+  gltfScene.scene.position.z = 300;
+  gltfScene.scene.position.x = -300;
+  gltfScene.scene.rotation.z = 0;
+  gltfScene.scene.rotation.x = 50;
+  gltfScene.scene.scale.set(0.01, 0.01, 0.01);
 
   scene.add(gltfScene.scene);
 });
 
 const animateModel = () => {
   if (loadedModel) {
-    loadedModel.scene.rotation.x += 0.0;
-    loadedModel.scene.rotation.y += 0;
-    loadedModel.scene.rotation.x -= 0;
     loadedModel.scene.position.z -= 0.5;
-    loadedModel.scene.position.y += 0.2;
-    loadedModel.scene.position.x -= 0.2;
+    loadedModel.scene.position.x += 0.01;
+    loadedModel.scene.position.x -= 0.0002;
+    loadedModel.scene.rotation.y += 0.0003;
+    loadedModel.scene.position.y += 0.0001;
   }
   requestAnimationFrame(animateModel);
 };
