@@ -9,6 +9,7 @@
     .body{
         width: 100%;
         height: 100%;
+        background-color: #0072ff;
     }
    
 
@@ -132,41 +133,8 @@ main{
                 grid-column:6 / 12
                 }
 
-                #buttonEarth{
-                    cursor : pointer;
-                    padding: 0.3rem 1rem;
-                    margin-top: 2rem;
-                    border: none;
-                    border-radius: 3rem;
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: 500;
-                    background-color:#0072ff;
-                    text-transform: uppercase;
-                    color: whitesmoke;
-                    font-size: 20px;
-                    position: absolute;left: 40%;
-                    position: absolute;bottom: 2.5%;
-                    display: grid;
-                    
+              
 
-                }
-
-                #buttonEarthExit{
-                    cursor : pointer;
-                    padding: 0.3rem 1rem;
-                    margin-top: 2rem;
-                    border: none;
-                    border-radius: 3rem;
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: 500;
-                    background-color:#0072ff;
-                    text-transform: uppercase;
-                    color: whitesmoke;
-                    font-size: 15px;
-                    position: absolute;left: 31.5%;
-                    position: absolute;bottom: 3%;
-
-                }
 
 
                 #buttonExplore{
@@ -188,6 +156,49 @@ main{
             
 
                 }
+
+                
+                #buttonBack{
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 20px;
+                    position: absolute;left: 42%;
+                    position: absolute;bottom: 0.5%;
+                    display: block;
+
+            
+
+                }
+
+
+                #buttonExploreNasa{
+                    cursor : pointer;
+                    padding: 0.3rem 1rem;
+                    margin-top: 2rem;
+                    border: none;
+                    border-radius: 3rem;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 500;
+                    background-color:#0072ff;
+                    text-transform: uppercase;
+                    color: whitesmoke;
+                    font-size: 20px;
+                    position: absolute;left: 60%;
+                    position: absolute;bottom: 2%;
+                    display: block;
+
+            
+
+                }
+
 
                 #buttonExploreExit{
                     background-color:#0072ff;

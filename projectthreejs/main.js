@@ -1,107 +1,9 @@
 import "./style.css";
 
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 //space ship 2
-let loadedModel3;
-const gltfLoader3 = new GLTFLoader();
-gltfLoader3.load("./space fighter/scene.gltf", (gltfScene3) => {
-  loadedModel3 = gltfScene3;
-  //console.log(loadedModel1);
-
-  gltfScene3.scene.rotation.y = 0;
-  gltfScene3.scene.position.y = 10;
-  gltfScene3.scene.position.z = -410;
-  gltfScene3.scene.position.x = +45;
-  gltfScene3.scene.rotation.z = 0;
-  gltfScene3.scene.rotation.x = 50;
-  gltfScene3.scene.scale.set(0.01, 0.01, 0.01);
-
-  scene.add(gltfScene3.scene);
-});
-
-const animateModel3 = () => {
-  if (loadedModel3) {
-    loadedModel3.scene.position.z += 0.5;
-    loadedModel3.scene.position.x -= 0.01;
-    loadedModel3.scene.position.x += 0.0002;
-    loadedModel3.scene.rotation.y -= 0.0003;
-    loadedModel3.scene.position.y += 0.05;
-
-    // loadedModel2.scene.position.y = originY + sin(angle) * radius;
-    //loadedModel2.scene.position.x = originX + cos(angle) * radius;
-  }
-  requestAnimationFrame(animateModel3);
-};
-
-animateModel3();
-
-//spaceship1
-
-let loadedModel2;
-const gltfLoader2 = new GLTFLoader();
-gltfLoader2.load("./space fighter/scene.gltf", (gltfScene2) => {
-  loadedModel2 = gltfScene2;
-  //console.log(loadedModel1);
-
-  gltfScene2.scene.rotation.y = -280;
-  gltfScene2.scene.position.y = 10;
-  gltfScene2.scene.position.z = 410;
-  gltfScene2.scene.position.x = +45;
-  gltfScene2.scene.rotation.z = 0;
-  gltfScene2.scene.rotation.x = 50;
-  gltfScene2.scene.scale.set(0.01, 0.01, 0.01);
-
-  scene.add(gltfScene2.scene);
-});
-
-const animateModel2 = () => {
-  if (loadedModel2) {
-    loadedModel2.scene.position.z -= 0.5;
-    loadedModel2.scene.position.x += 0.01;
-    loadedModel2.scene.position.x -= 0.0002;
-    loadedModel2.scene.rotation.y += 0.0003;
-    loadedModel2.scene.position.y += 0.0001;
-
-    // loadedModel2.scene.position.y = originY + sin(angle) * radius;
-    //loadedModel2.scene.position.x = originX + cos(angle) * radius;
-  }
-  requestAnimationFrame(animateModel2);
-};
-
-animateModel2();
-//spaceship
-
-let loadedModel;
-const gltfLoader = new GLTFLoader();
-gltfLoader.load("./space fighter/scene.gltf", (gltfScene) => {
-  loadedModel = gltfScene;
-  //console.log(loadedModel1);
-  gltfScene.scene.rotation.y = -280;
-  gltfScene.scene.position.y = 10;
-  gltfScene.scene.position.z = 300;
-  gltfScene.scene.position.x = -100;
-  gltfScene.scene.rotation.z = 0;
-  gltfScene.scene.rotation.x = 50;
-  gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-
-  scene.add(gltfScene.scene);
-});
-
-const animateModel = () => {
-  if (loadedModel) {
-    loadedModel.scene.position.z -= 0.5;
-    loadedModel.scene.position.x += 0.01;
-    loadedModel.scene.position.x -= 0.0002;
-    loadedModel.scene.rotation.y += 0.0003;
-    loadedModel.scene.position.y += 0.0001;
-  }
-  requestAnimationFrame(animateModel);
-};
-
-animateModel();
 
 //space buttons
 
@@ -264,7 +166,7 @@ function addStar() {
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(180));
+    .map(() => THREE.MathUtils.randFloatSpread(100));
 
   star.position.set(x, y, z);
   scene.add(star);
@@ -658,51 +560,9 @@ scene.add(satarm3);
 
 //playermain
 
-const player3 = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshPhongMaterial({ color: 0x0000ff })
-);
-
-player3.position.set(-3, 0, 0);
-player3.castShadow = true;
-player3.receiveShadow = true;
-
-let player4 = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
-player4.setFromObject(player3);
-
 //ball
 
-const ball1Texture = new THREE.TextureLoader().load("deathstar.jpg");
-
-const ball1 = new THREE.Mesh(
-  new THREE.SphereGeometry(0.05),
-  new THREE.MeshPhongMaterial({ map: ball1Texture })
-);
-
-ball1.position.set(0, +2, +160);
-ball1.castShadow = true;
-ball1.receiveShadow = true;
-
-let ball1BB = new THREE.Sphere(ball1.position, 1);
-
-scene.add(ball1);
-
 //satelite ball 2
-
-const ball2Texture = new THREE.TextureLoader().load("deathstar.jpg");
-
-const ball2 = new THREE.Mesh(
-  new THREE.SphereGeometry(0.05),
-  new THREE.MeshPhongMaterial({ map: ball2Texture })
-);
-
-ball2.position.set(0, -5, +143);
-ball2.castShadow = true;
-ball2.receiveShadow = true;
-
-let ball2BB = new THREE.Sphere(ball2.position, 1);
-
-scene.add(ball2);
 
 //satball 3
 
@@ -723,52 +583,9 @@ scene.add(ball3);
 
 // animate balls and blocks
 
-animate();
-
-function animate() {
-  player4.copy(player3.geometry.boundingBox).applyMatrix4(player3.matrixWorld);
-
-  checkCollisions();
-
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
-}
-
 //check collisions
 
-function checkCollisions() {
-  if (player4.intersectsBox(player2)) {
-    animation1();
-  } else {
-    player.material.opacity = 1.0;
-  }
-
-  if (player4.intersectsSphere(ball1BB)) {
-    animation2();
-  } else {
-    ball1.material.opacity = 1.0;
-  }
-
-  if (player4.containsBox(player2)) {
-    player3.scale.y = 3;
-  } else {
-    player3.scale.y = 1;
-  }
-}
-
 //animation block and balls
-
-function animation1() {
-  player.material.transparent = true;
-  player.material.opacity = 0.5;
-  player.material.color = new THREE.Color(Math.random() * 0xfffffff);
-}
-
-function animation2() {
-  ball1.material.transparent = true;
-  ball1.material.opacity = 0.5;
-  ball1.material.color = new THREE.Color(Math.random() * 0xfffffff);
-}
 
 //ring
 
@@ -785,17 +602,11 @@ ring.receiveShadow = true;
 
 ring.rotateX(-300);
 
-function ringAnimate() {
-  requestAnimationFrame(ringAnimate);
+ring.rotation.z -= 0.001;
 
-  ring.rotation.z -= 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ringAnimate();
+renderer.render(scene, camera);
 
 scene.add(ring);
 
@@ -814,17 +625,11 @@ ring2.receiveShadow = true;
 
 ring2.rotateX(-300);
 
-function ring2Animate() {
-  requestAnimationFrame(ring2Animate);
+ring2.rotation.z += 0.001;
 
-  ring2.rotation.z += 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring2Animate();
+renderer.render(scene, camera);
 
 scene.add(ring2);
 
@@ -844,17 +649,11 @@ ring4.receiveShadow = true;
 
 ring4.rotateX(-300);
 
-function ring4Animate() {
-  requestAnimationFrame(ring4Animate);
+ring4.rotation.z += 0.001;
 
-  ring4.rotation.z += 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring4Animate();
+renderer.render(scene, camera);
 
 scene.add(ring4);
 
@@ -873,17 +672,9 @@ ring3.receiveShadow = true;
 
 ring3.rotateX(-300);
 
-function ring3Animate() {
-  requestAnimationFrame(ring3Animate);
+controls.update();
 
-  ring3.rotation.z += 0.001;
-
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring3Animate();
+renderer.render(scene, camera);
 
 scene.add(ring3);
 
@@ -904,17 +695,9 @@ ring5.receiveShadow = true;
 
 ring5.rotateX(-300);
 
-function ring5Animate() {
-  requestAnimationFrame(ring5Animate);
+controls.update();
 
-  ring5.rotation.z += 0.001;
-
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring5Animate();
+renderer.render(scene, camera);
 
 scene.add(ring5);
 
@@ -935,17 +718,9 @@ ring6.receiveShadow = true;
 
 ring6.rotateX(-300);
 
-function ring6Animate() {
-  requestAnimationFrame(ring6Animate);
+controls.update();
 
-  ring6.rotation.z += 0.001;
-
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring6Animate();
+renderer.render(scene, camera);
 
 scene.add(ring6);
 
@@ -966,17 +741,11 @@ ring7.receiveShadow = true;
 
 ring7.rotateX(-300);
 
-function ring7Animate() {
-  requestAnimationFrame(ring7Animate);
+ring7.rotation.z += 0.001;
 
-  ring7.rotation.z += 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring7Animate();
+renderer.render(scene, camera);
 
 scene.add(ring7);
 
@@ -996,17 +765,11 @@ ring8.receiveShadow = true;
 
 ring8.rotateX(-300);
 
-function ring8Animate() {
-  requestAnimationFrame(ring8Animate);
+ring8.rotation.z += 0.001;
 
-  ring8.rotation.z += 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring8Animate();
+renderer.render(scene, camera);
 
 scene.add(ring8);
 
@@ -1027,16 +790,10 @@ ring9.receiveShadow = true;
 
 ring9.rotateX(-300);
 
-function ring9Animate() {
-  requestAnimationFrame(ring9Animate);
+ring9.rotation.z += 0.001;
 
-  ring9.rotation.z += 0.001;
+controls.update();
 
-  controls.update();
-
-  renderer.render(scene, camera);
-}
-
-ring9Animate();
+renderer.render(scene, camera);
 
 scene.add(ring9);
