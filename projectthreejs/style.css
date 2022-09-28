@@ -179,25 +179,6 @@ main{
                 }
 
 
-                #buttonExploreNasa{
-                    cursor : pointer;
-                    padding: 0.3rem 1rem;
-                    margin-top: 2rem;
-                    border: none;
-                    border-radius: 3rem;
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: 500;
-                    background-color:#0072ff;
-                    text-transform: uppercase;
-                    color: whitesmoke;
-                    font-size: 20px;
-                    position: absolute;left: 60%;
-                    position: absolute;bottom: 2%;
-                    display: block;
-
-            
-
-                }
 
 
                 #buttonExploreExit{
